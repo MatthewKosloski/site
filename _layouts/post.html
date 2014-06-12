@@ -1,0 +1,47 @@
+{% include head.html %}
+<div class="article wrapper">
+
+
+	<section class="cf main">
+
+			<div class="project-description">
+
+				<article>
+
+					<section class="article-title">
+	  					<h1>{{ page.title }}</h1>
+						<h2>{{ page.date | date: "%B %d, %Y" }}</h2>
+	 			 		<hr class="article-sep">
+					</section>
+
+					{{ content }}
+
+				</article>
+				
+			</div>
+
+			<ul class="cf post-attributes">
+
+				<li>
+					<h6>Published on</h6>
+					<p>{{ page.date | date: "%B %d, %Y" }}</p>
+				</li>
+
+				<li>
+					<h6>Word Count</h6>
+					{% capture time %}{{ content | count_words }}{% endcapture %}
+					<p>{{ time }}</p>
+				</li>
+
+				<li>
+					<h6>Reading time</h6>
+					{% capture time %}{{ content | reading_time }}{% endcapture %}
+					<p>{{ time }} {% if time == '1' %}minute{% else %}minutes{% endif %}</p>
+				</li>
+
+			</ul>
+
+	</section>
+
+</div>
+{% include footer.html %}

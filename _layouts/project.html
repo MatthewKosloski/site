@@ -1,0 +1,70 @@
+{% include head.html %}
+<div class="wrapper">
+
+	<section class="title">
+	  	<h1>{{ page.title }}</h1>
+	  	<hr>
+	</section>
+
+	<section class="cf main">
+
+		<div class="cf grid">
+
+			<ul class="cf project-attributes grid__col--1-of-5">
+
+				<li>
+					{% if page.client %}
+					<h6>Client</h6>
+					<p>{{ page.client }}</p>
+					{% endif %}
+				</li>
+
+				<li>
+					{% if page.role %}
+					<h6>Role</h6>
+					<p>{{ page.role }}</p>
+					{% endif %}
+				</li>
+
+				<li>
+					{% if page.tasks %}
+					<h6>Tasks</h6>
+					<p>{{ page.tasks }}</p>
+					{% endif %}
+				</li>
+
+				<li>
+					{% if page.technologies %}
+					<h6>Technologies</h6>
+					<p>{{ page.technologies }}</p>
+					{% endif %}
+				</li>
+
+				<li>
+					{% if page.website_url %}
+					<h6>Website</h6>
+					<p><a href="{{ page.website_url }}">{{ page.website_name }}</a></p>
+					{% endif %}
+				</li>
+
+			</ul>
+
+			<div class="project-description grid__col--4-of-5">
+
+				{{ content }}
+
+				{% if page.fancybox %}
+					<a class="fancybox" href="{{ page.fancybox }}" data-fancybox-group="gallery">
+						<img src="{{ page.fancybox }}" alt="" />
+					</a>
+				{% endif %}
+				
+			</div>
+
+		</div>
+
+	</section>
+
+</div>
+{% include footer.html %}
+
