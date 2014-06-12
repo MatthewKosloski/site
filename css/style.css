@@ -91,7 +91,7 @@ html {
 body {
     background-color: #fff;
     color: #444;
-    font: 125%/1.4 "ChaparralProRegular", Georgia, serif; 
+    font: 125%/1.4 "ChaparralProRegular", Georgia, serif; /*Caecilia LT Std*/
 }
 
 a {
@@ -310,10 +310,20 @@ footer {
     margin: 0 0 100px 0;
     padding: 45px 0 0 0;
     border-top: 1px solid #f3f3f3;
+    border-bottom: 1px solid #f3f3f3;
 }
 
-footer p {
+footer .footer-about {
     width: 85%;
+}
+
+footer .foot-note {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    font-size: 16px;
 }
 
 footer ul {
@@ -770,6 +780,20 @@ textarea {
 
 @media only screen and (max-width: 700px) {
 
+footer p {
+    width: 100%;
+}
+
+footer ul.grid__col--3-of-12:nth-child(2) {
+    display: none;
+}
+
+footer ul.grid__col--3-of-12:nth-child(3),
+footer ul.grid__col--2-of-12:nth-child(4) {
+    float: left;
+    width: 50%;
+}
+
 .post-attributes {
     width: 100%;
 }
@@ -815,6 +839,10 @@ header nav.grid__col--3-of-5 {
 
 @media only screen and (max-width: 30em) {
 
+.project-attributes.grid__col--1-of-5 li {
+    width: 100%;
+}
+
 form {
     font-size: 15px;
 }
@@ -842,24 +870,6 @@ p {
 
 h1 {
     font-size: 36px;
-}
-
-footer p {
-    width: 100%;
-}
-
-ul.footer-list:nth-child(2) {
-    display: none;
-}
-
-ul.footer-list:nth-child(3) {
-    float: left;
-    width: 50%;
-}
-
-ul.footer-list:nth-child(4) {
-    float: right;
-    width: 50%;
 }
 
 }

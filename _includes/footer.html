@@ -1,11 +1,11 @@
        <div class="wrapper">
-            <footer>
+            <footer class="cf">
 
-                <div class="grid">
+                <div class="cf grid">
 
                     <ul class="grid__col--4-of-12">
                         <h6>About</h6>
-                        <p>{{ site.description }}</p>
+                        <p class="footer-about">{{ site.description }}</p>
                     </ul>
 
                     <ul class="grid__col--3-of-12">
@@ -49,31 +49,15 @@
 
                 </div>
 
+                <p id="foot-note" class="foot-note"></p>
+
             </footer>
 
         </div>
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    {% if page.url == "/contact/index.html" %}<script src="{{ site.url }}/js/form.js"></script>{% endif %}
+    <script src="{{ site.url }}/js/site.js"></script>
     <script src="{{ site.url }}/js/box.js"></script> 
-
-    <script>
-
-        $(document).ready(function(){
-
-            $("#subject").on("click", function(){
-                $("#subjects").slideToggle(210);
-            });
-
-            $("ul.subjects > li").on("click", function(){
-                $("#subjects").slideUp(210);
-                $("#subject").text($(this).text());
-                $("#hidden-subject").val($(this).text());
-            });
-
-        });
-
-    </script>
 
     {% if page.url == "/index.html" %}
     <script>
