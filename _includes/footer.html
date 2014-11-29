@@ -56,10 +56,12 @@
         </div>
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="{{ site.url }}/js/jquery.photoset-grid.min.js"></script>
+    <script src="{{ site.url }}/js/jquery.colorbox.js"></script>
     <script src="{{ site.url }}/js/site.js"></script>
     <script src="{{ site.url }}/js/box.js"></script> 
 
-    {% if page.url == "/index.html" %}
+<!--     {% if page.url == "/index.html" %}
     <script>
         // about caption
         if($(window).width()>768){
@@ -70,7 +72,7 @@
             });
         }
     </script> 
-    {% endif %}
+    {% endif %} -->
 
 
     {% if page.url == "/work/index.html" %}
@@ -119,10 +121,6 @@
     {% endif %}
 
     <script>
-            $(document).ready(function(){$('.fancybox').fancybox();});
-    </script> 
-
-    <script>
 
           var GoSquared = {};
           GoSquared.acct = "GSN-121401-L";
@@ -141,6 +139,28 @@
           })(window);
   
     </script>
+
+  <script>
+  $('.photoset-grid-lightbox').photosetGrid({
+    highresLinks: true,
+    rel: 'withhearts-gallery',
+    gutter: '10px',
+    onComplete: function(){
+      $('.photoset-grid-lightbox').attr('style', '');
+      $('.photoset-grid-lightbox a').colorbox({
+          onLoad: function(){
+            $('button#cboxClose').css({'display':'none'});
+            $("button#cboxPrevious").css({'display':'none'});
+            $("button#cboxNext").css({'display':'none'});
+          },
+          photo: true,
+          scalePhotos: true,
+          maxHeight:'90%',
+          maxWidth:'90%'
+      });
+    }
+  });
+  </script>
 
     </body>
 </html>

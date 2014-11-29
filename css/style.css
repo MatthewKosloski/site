@@ -117,7 +117,7 @@ a:hover {
     content: "";
 }
 
-p, img, figure, ul, ol, .form-module {
+p, pre, img, figure, ul, ol, .form-module, .photoset-grid-lightbox {
     margin: 0 0 25px 0;
 }
 
@@ -170,10 +170,6 @@ h4 {
     font-size: 0.65em;
 }
 
-h5 {
-
-}
-
 h6 {
     color: #666;
     font-size: 13px;
@@ -189,9 +185,28 @@ h5 {
     color: inherit;
 }
 
+code, pre {
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    font-size: 15px;
+}
+
+code {
+    color: #df4747;
+}
+
+pre {
+    background-color: #f3f3f3;
+    word-wrap: break-word;
+    padding: 10px;
+}
+
 /*******************************************************************************
  * STYLES
  ******************************************************************************/
+
+ article p img {
+    margin-bottom: 0 !important;
+ }
 
 .logo {
     margin: 1px 0 0 0;
@@ -280,12 +295,7 @@ section.main {
     padding: 70px 0 100px 0;
 }
 
-.me {
-    position: relative;
-    line-height: 10px;
-}
-
-.me > img {
+/*.me > img {
     margin: 0;
 }
 
@@ -300,10 +310,25 @@ section.main {
     color: #fff;
     font-size: 15px;
     font-family: "AvenirNextLTProRegular", "Lucida Grande", Arial, sans-serif;
+}*/
+
+/*.me {
+    position: relative;
+    line-height: 10px;
+}*/
+
+figure img {
+    margin: 0 0 8px 0;
 }
 
-.me > figcaption a {
-    text-decoration: none;
+figcaption {
+    position: relative;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    line-height: 28px;
+    font-size: 15px;
+    font-family: "AvenirNextLTProRegular", "Lucida Grande", Arial, sans-serif;
 }
 
 footer {
@@ -864,7 +889,7 @@ header nav  {
     font-size: 16px;
 }
 
-p {
+p:not(figcaption p) {
     font-size: 18px;
 }
 

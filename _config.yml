@@ -1,8 +1,8 @@
 # Site settings
 name: Matthew Kosloski
 email: hi@mtk.me
-url: http://mtk.me
-description: "My name is Matthew, and I'm a 16-year-old front-end web developer and designer from Chicago. I specialize in front-end development, responsive web design, and search engine optimization."
+url: http://matthewkosloski.me
+description: "My name is Matthew, and I'm a 17-year-old front-end web developer and designer from Chicago. I specialize in front-end development, responsive web design, and search engine optimization."
 timezone: America/Chicago
 include: ['.htaccess']
 port: 4001

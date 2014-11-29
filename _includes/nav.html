@@ -1,4 +1,5 @@
-<a href="/" {% if page.url == "/index.html" %} class="active" {% endif %}>About</a>
-<a href="/work" {% if page.url == '/work/index.html' %} class="active" {% endif %}>Work</a>
-<a href="/journal" {% if page.url == '/journal/index.html' %} class="active" {% endif %}>Journal</a>
-<a href="/contact" {% if page.url == '/contact/index.html' %} class="active" {% endif %}>Contact</a> 
+{% assign current = page.url | downcase | split: '/' %}
+<a href="/" {% if current[1] == 'index.html' %}class='active'{% endif %}>About</a>
+<a href="/work" {% if current[1] == 'work' %}class='active'{% endif %}>Work</a>
+<a href="/journal" {% if current[1] == 'journal' %}class='active'{% endif %}>Journal</a>
+<a href="/contact" {% if current[1] == 'contact' %}class='active'{% endif %}>Contact</a> 
