@@ -7,14 +7,15 @@ title_text: I write about paramount things.
 
 <section class="main journal">
 
-<h2>2014</h2>
-<ul class="posts-in-year">
 {% for post in site.categories.journal %}
-    {% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
-        {% if year == "2014" %}
-                    <li><p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> &mdash; {{ post.date | date: "%B %d" }}</p></li>
-        {% endif %}
+  {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
+  {% if currentyear != year %}
+    <h2>{{ currentyear }}</h2>
+    {% capture year %}{{currentyear}}{% endcapture %} 
+  {% endif %}
+  <ul class="posts-in-year">
+    <li><p><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> &mdash; {{ post.date | date: "%B %d" }}</p></li>
+  </ul>
 {% endfor %}
-</ul>
 
 </section>
