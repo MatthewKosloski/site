@@ -295,28 +295,6 @@ section.main {
     padding: 70px 0 100px 0;
 }
 
-/*.me > img {
-    margin: 0;
-}
-
-.me > figcaption {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 25px 20px 22px 20px;
-    width: 100%;
-    background-color: rgba(0,0,0,0.75);
-    color: #fff;
-    font-size: 15px;
-    font-family: "AvenirNextLTProRegular", "Lucida Grande", Arial, sans-serif;
-}*/
-
-/*.me {
-    position: relative;
-    line-height: 10px;
-}*/
-
 figure img {
     margin: 0 0 8px 0;
 }
@@ -660,6 +638,7 @@ textarea,
     padding: 10px 15px;
     width: 100%;
     -webkit-appearance: none;
+    border-radius: 0;
 }
 
 .subject {
@@ -676,7 +655,8 @@ input {
     height: 48px;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
     border: 2px solid #e5e5e5;
 }
 
