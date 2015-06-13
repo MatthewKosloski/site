@@ -42,8 +42,8 @@ function formValidation(data){
             name.style.borderColor = "#df4747";
             flag = false;
         } else if(name.value == "" || name.value == null){
-        	name.style.borderColor = "#df4747";
-        	name.placeholder = status[0];
+            name.style.borderColor = "#df4747";
+            name.placeholder = status[0];
             flag = false;
         } else if (name.value.indexOf(space) == 0 || name.value.indexOf(space) == -1) {
             name.style.borderColor = "#df4747";
@@ -58,8 +58,8 @@ function formValidation(data){
         }
 
         if(email.value == "" || email.value == null){
-        	email.style.borderColor = "#df4747";
-        	email.placeholder = status[1];
+            email.style.borderColor = "#df4747";
+            email.placeholder = status[1];
             flag = false;
         } else if(emailPatt.test(email.value) == false){
             email.style.borderColor = "#df4747";
@@ -75,8 +75,8 @@ function formValidation(data){
         }  
 
         if(subject.value == "" || subject.value == null){
-        	subject.style.borderColor = "#df4747";
-        	subject.placeholder = status[3];
+            subject.style.borderColor = "#df4747";
+            subject.placeholder = status[3];
             flag = false;
         } else {
             subject.style.borderColor = "#f3f3f3";
@@ -107,21 +107,50 @@ function formValidation(data){
 }
 
 var d = new Date(),n = d.getFullYear(), 
-    fn = document.getElementById('foot-note'), 
-    fnLink = "<a href='https://github.com/MatthewKosloski/site'>source</a>.";
-    fn.innerHTML = "&copy;" + " " + n + " " + "Matthew Kosloski.  View the" + " " + fnLink;
+fn = document.getElementById('foot-note'), 
+fnLink = "<a href='https://github.com/MatthewKosloski/site'>source</a>.";
+fn.innerHTML = "&copy;" + " " + n + " " + "Matthew Kosloski.  View the" + " " + fnLink;
 
 $(document).ready(function(){
 
-            $("#subject").on("click", function(){
-                $("#subjects").slideToggle(210);
-            });
+        $("#subject").on("click", function(){
+            $("#subjects").slideToggle(210);
+        });
 
-            $("ul.subjects > li").on("click", function(){
-                $("#subjects").slideUp(210);
-                $("#subject").text($(this).text());
-                $("#hidden-subject").val($(this).text());
-            });
+        $("ul.subjects > li").on("click", function(){
+            $("#subjects").slideUp(210);
+            $("#subject").text($(this).text());
+            $("#hidden-subject").val($(this).text());
+        });
 
 });
 
+if($(window).width()>960){
+    $('.overlay-link').mouseover(function () {
+        $(this).find('.overlay').fadeIn(200);
+        $(this).find('.pe-7s-glasses').addClass("view-animation");
+    }).mouseleave(function () {
+        $(this).find('.overlay').fadeOut(200);
+        (this).find('.pe-7s-glasses').removeClass("view-animation");
+    });
+}
+
+$('.photoset-grid-lightbox').photosetGrid({
+highresLinks: true,
+rel: 'withhearts-gallery',
+gutter: '10px',
+onComplete: function(){
+  $('.photoset-grid-lightbox').attr('style', '');
+  $('.photoset-grid-lightbox a').colorbox({
+      onLoad: function(){
+        $('button#cboxClose').css({'display':'none'});
+        $("button#cboxPrevious").css({'display':'none'});
+        $("button#cboxNext").css({'display':'none'});
+      },
+      photo: true,
+      scalePhotos: true,
+      maxHeight:'90%',
+      maxWidth:'90%'
+  });
+}
+});
