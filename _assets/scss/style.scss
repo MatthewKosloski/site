@@ -27,6 +27,7 @@ body {
     color: $bodyGray;
     font: 112.5%/1.5 "ChaparralProRegular", Georgia, serif;
     @include breakpoint(md) {font-size: 105%;}
+    @include breakpoint(sm) {font-size: 100%;}
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: normal;
@@ -798,7 +799,7 @@ form {
 }
 
 header nav a:not(:first-child) {
-    margin: 0 0 0 29px;
+    margin: 0 0 0 16px;
 }
 
 header nav  {
