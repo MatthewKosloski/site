@@ -1,0 +1,63 @@
+/*******************************
+ * AUTHOR'S RESET
+ ******************************/
+
+*,
+:before,
+:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: underline;
+    background: transparent;
+}
+
+ol, 
+ul {
+    list-style: none;
+}
+ 
+textarea,
+button, 
+select,
+input {
+    font: inherit;
+}
+
+blockquote, 
+q {
+    quotes: none;
+}
+
+blockquote:before, 
+blockquote:after,
+q:before, 
+q:after {
+    content: none;
+    content: '';
+}
+
+.cf:before,
+.cf:after {
+    display: table;
+    content: " ";
+}
+.cf:after {
+    clear: both;
+}
