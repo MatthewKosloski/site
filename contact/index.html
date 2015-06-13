@@ -7,49 +7,40 @@ title_text: Do you want to work together on a project, or just say hello?
 
 <section class="main">
 
-	    <noscript>
-        	<p class="noscript">This page needs JavaScript enabled to work.</p> 
-        	<style>.noscript{text-align:center;}form{display:none;}</style>
-    	</noscript>
+    <noscript>
+    	<p class="noscript">This page needs JavaScript enabled to work.</p> 
+    	<style>.noscript{text-align:center;}form{display:none;}</style>
+	</noscript>
 
-		<form class="cf" autocomplete="off" spellcheck="false" onsubmit="return formValidation(this);" action="javascript:void(0);" method="post" novalidate>
-
-			<div class="grid">
-
-				<input type="text" style="display:none;" value="" id="antibot">
-                
-	    		<div class="form-module grid__col--1-of-2">
-	      			<label>Full Name<span class="required">&#42;</a></label>
-	      			<input type="text" name="name" id="name">
-	    		</div>
-
-	    		<div class="form-module grid__col--1-of-2">
-	      			<label>Email<span class="required">&#42;</a></label>
-	      			<input type="text" name="email" id="email">
-	    		</div>
-
-	    		<div class="form-module grid__col--2-of-2">
-	      			<label>Subject<span class="required">&#42;</a></label>
-	      			<input id="hidden-subject" name="subject" type="hidden" value="Work Inquiry">
-	      			<span id="subject" class="subject" type="text" id="subject">Work Inquiry</span>
-	      			<ul id="subjects" class="subjects">
-	      				<li>Work Inquiry</li>
-	      				<li>Front-end Development</li>
-	      				<li>Web Design</li>
-	      				<li>I'm just saying hello!</li>
-	      				<li>I'm an extraterrestrial life form looking for a place to sleep</li>
-	      			</ul>
-	    		</div>
-
-	    		<div class="form-module grid__col--2-of-2">
-	      			<label>Message<span class="required">&#42;</a></label>
-	      			<textarea name="message" id="message"></textarea>
-	    		</div>
-
+	<form class="cf" autocomplete="off" spellcheck="false" onsubmit="return formValidation(this);" action="javascript:void(0);" method="post" novalidate>
+		<div class="grid">
+			<input type="text" style="display:none;" value="" id="antibot">           
+    		<div class="form-module grid__col--1-of-2">
+      			<label>Full Name<span class="required">&#42;</a></label>
+      			<input type="text" name="name" id="name">
     		</div>
-
-    		 <button type="submit" name="send" class="btn send">Send</button>
-
-    	</form>	
+    		<div class="form-module grid__col--1-of-2">
+      			<label>Email<span class="required">&#42;</a></label>
+      			<input type="text" name="email" id="email">
+    		</div>
+    		<div class="form-module grid__col--2-of-2">
+      			<label>Subject<span class="required">&#42;</a></label>
+      			<input id="hidden-subject" name="subject" type="hidden" value="Work Inquiry">
+      			<span id="subject" class="subject" type="text" id="subject">Work Inquiry</span>
+      			<ul id="subjects" class="subjects">
+      				<li>Work Inquiry</li>
+      				<li>Front-end Development</li>
+      				<li>Web Design</li>
+      				<li>I'm just saying hello!</li>
+      				<li>I'm an extraterrestrial life form looking for a place to sleep</li>
+      			</ul>
+    		</div>
+    		<div class="form-module grid__col--2-of-2">
+      			<label>Message<span class="required">&#42;</a></label>
+      			<textarea name="message" id="message"></textarea>
+    		</div>
+		</div>
+		 <button type="submit" name="send" class="btn send">Send</button>
+	</form>	
 
 </section>
