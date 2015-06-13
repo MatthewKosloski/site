@@ -1,4 +1,4 @@
-#Site source for mtk.me and matthewkosloski.me
+#matthewkosloski.me
 
 The aesthetics of this website will never remain stationary; they will always change. That’s the beauty of having your own website. It’s a place where you can dictate the look and functionality of the experience.
 
