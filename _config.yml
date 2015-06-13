@@ -19,6 +19,9 @@ permalink: /:categories/:title
 # Build settings
 markdown: kramdown
 
+gems:
+  - jekyll-sitemap
+
 # Plugins
 sitemap:
     file: "/sitemap.xml"
