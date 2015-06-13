@@ -4,6 +4,6 @@ categories: link
 weight: 4
 title: Portfolio
 link: "http://v1.mtk.me/"
-work_preview: "/uploads/v1-portfolio.png"
+work_preview: "/uploads/2014/work/v1-portfolio/v1-portfolio.png"
 ---
 
