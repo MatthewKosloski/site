@@ -1,6 +1,6 @@
 
 /*******************************************************************************
- * CUSTOM RESETS
+ * CUSTOM RESETS && IMPORTS
  ******************************************************************************/
 
 @import "normalize";
@@ -8,37 +8,41 @@
 @import "grid";
 @import "pe-icon-7-stroke";
 @import "colorbox";
+@import "bourbon/bourbon";
+
+/*******************************************************************************
+ * AUTHOR'S BASE
+ ******************************************************************************/
+
+$white: #fff;
+$bodyGray: #444;
+$selectionGray: #f3f3f3;
+
+html,
+body {
+    background-color: $white;
+    color: $bodyGray;
+    font: 112.5%/1.5 "ChaparralProRegular", Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: normal;
+}
 
 ::selection {
-    background-color: #f3f3f3;
+    background-color: $selectionGray;
 }
 
 ::-moz-selection {
-    background-color: #f3f3f3;
+    background-color: $selectionGray;
 }
+
 
 /*******************************************************************************
- * BODY
+ * AUTHOR'S STYLES
  ******************************************************************************/
 
-html {
-    -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    -webkit-font-feature-settings: "kern";
-    font-feature-settings: "kern";
-    -webkit-font-kerning: normal;
-    font-kerning: normal;
-}
-
-body {
-    background-color: #fff;
-    color: #444;
-    font: 125%/1.4 "ChaparralProRegular", Georgia, serif; /*Caecilia LT Std*/
-}
-
 a {
-    color: #df4747; /*a1d26 3,229ce0,df4747*/
+    color: #df4747;
 }
 
 a:hover {
@@ -138,7 +142,7 @@ code {
 }
 
 pre {
-    background-color: #f3f3f3;
+    background-color: $selectionGray;
     word-wrap: break-word;
     padding: 10px;
 }
@@ -165,7 +169,7 @@ pre {
 
 header {
     padding: 90px 0 0 0;
-    border-bottom: 1px solid #f3f3f3;
+    border-bottom: 1px solid $selectionGray;
 }
 
 header nav {
@@ -195,7 +199,7 @@ header nav a  {
 .active,
 header nav a:hover {
     border-bottom: 1px solid #df4747;
-    color: #444;
+    color: $bodyGray;
     -webkit-transition: .2s all ease;
     -moz-transition: .2s all ease;
     -ms-transition: .2s all ease;
@@ -220,7 +224,7 @@ section.title p {
 section.title hr {
     margin: 0 auto;
     width: 3em;
-    border-bottom: 2px solid #f3f3f3;
+    border-bottom: 2px solid $selectionGray;
 }
 
 i[class*="pe-7s-"],
@@ -255,8 +259,8 @@ figcaption {
 footer {
     margin: 0 0 100px 0;
     padding: 45px 0 0 0;
-    border-top: 1px solid #f3f3f3;
-    border-bottom: 1px solid #f3f3f3;
+    border-top: 1px solid $selectionGray;
+    border-bottom: 1px solid $selectionGray;
 }
 
 footer .footer-about {
@@ -295,7 +299,7 @@ footer a {
     -o-border-radius: 999px;
     border-radius: 999px;
     background-color: #df4747;
-    color: #fff;
+    color: $white;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -308,7 +312,7 @@ footer a {
 
 .btn:hover {
     background-color: #d14141;
-    color: #fff;
+    color: $white;
 }
 
 .view-more:before {
@@ -373,7 +377,7 @@ footer a {
     padding: 10px;
     width: 60px;
     height: 60px;
-    color: #fff;
+    color: $white;
     font-size: 40px;
     top: 36.7%;
     left: 39.6%;
@@ -534,12 +538,12 @@ section.article-title hr {
     padding: 0;
     margin: 0 auto;
     width: 3em;
-    border-bottom: 2px solid #f3f3f3;
+    border-bottom: 2px solid $selectionGray;
 }
 
 article hr {
     border: none;
-    border-bottom: 2px solid #f3f3f3;
+    border-bottom: 2px solid $selectionGray;
     width: 6rem;
     padding-top: 1.4rem;
     margin: -2px auto 2.8rem;
@@ -574,7 +578,7 @@ form {
 input,
 textarea,
 .subject {
-    border: 2px solid #f3f3f3;
+    border: 2px solid $selectionGray;
     font-size: 16px;
     line-height: 18px;
     color: inherit;
@@ -605,21 +609,21 @@ textarea:focus {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder { /* WebKit browsers */
-    color:    #444;
+    color:    $bodyGray;
 }
 input:-moz-placeholder,
 textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:    #444;
+    color:    $bodyGray;
     opacity:  1;
 }
 input::-moz-placeholder,
 textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color:    #444;
+    color:    $bodyGray;
     opacity:  1;
 }
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
-    color:    #444;
+    color:    $bodyGray;
 }
 
 textarea {
@@ -666,7 +670,7 @@ textarea {
     font-size: 16px;
     line-height: 2;
     padding: 10px 15px;
-    border: 2px solid #f3f3f3;
+    border: 2px solid $selectionGray;
     margin-top: -2px;
     display: none;
 }
@@ -896,7 +900,7 @@ h1 {
 
 .fancybox-skin {
     position: relative;
-    background: #fff;
+    background: $white;
     color: inherit;
     text-shadow: none;
     margin: 0 0 20px 0;
