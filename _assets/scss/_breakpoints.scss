@@ -1,0 +1,35 @@
+@mixin cover-background($img-uri) {
+    background: url($img-uri) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+// breakpoints
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 40em) {/*640*/
+      @content;
+    }
+  }
+  @if $breakpoint == md {
+    @media (max-width: 48em) {/*768*/
+      @content;
+    }
+  }
+  @if $breakpoint == lg {
+    @media (max-width: 64.063em) {/*1025*/
+      @content;
+    }
+  }
+  @if $breakpoint == xl {
+    @media (max-width: 120.063em) {/*1921*/
+      @content;
+    }
+  }
+  @media (max-width: $breakpoint) {
+  	@content;
+  }
+}
