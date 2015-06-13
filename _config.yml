@@ -1,22 +1,25 @@
 # Site settings
 name: Matthew Kosloski
 email: hi@mtk.me
-url: http://matthewkosloski.me
+url: http://localhost:4000
 description: "My name is Matthew, and I'm a 17-year-old front-end web developer and designer from Chicago. I specialize in front-end development, responsive web design, and search engine optimization."
 timezone: America/Chicago
 include: ['.htaccess']
-port: 4001
+port: 4000
+
+# Variables
 dribbble: matthewkosloski
 instagram: matthewkosloski
 twitter: _mkos
+color: df4747
+keywords: "web designer, web developer, matthew kosloski, front-end development, css3, html5, dribbble, twitter, instagram, javascript, search engine optimization, jquery, responsive web design"
 
 permalink: /:categories/:title
-
-gems: [nokogiri]
 
 # Build settings
 markdown: kramdown
 
+# Plugins
 sitemap:
     file: "/sitemap.xml"
     exclude:
@@ -26,3 +29,12 @@ sitemap:
         - "/index.html"
     change_frequency_name: "change_frequency"
     priority_name: "priority"
+
+assets:
+  js_compressor:  uglifier
+  css_compressor: sass
+  cache: true
+  sources:
+    - _assets/js
+    - _assets/scss
+  cachebust: hard
