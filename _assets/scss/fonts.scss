@@ -1,0 +1,46 @@
+/*******************************************************************************
+ * Fonts
+ ******************************************************************************/
+
+ @font-face {
+    font-family: ChaparralProBold;
+    src: url(../fonts/chaparral-pro/chaparralpro-bold.eot);
+    src: url(../fonts/chaparral-pro/chaparralpro-bold.eot) format('embedded-opentype'),url(../fonts/chaparral-pro/chaparralpro-bold.woff) format('woff'),url(../fonts/chaparral-pro/chaparralpro-bold.ttf) format('truetype'),url(../fonts/chaparral-pro/chaparralpro-bold.svg#ChaparralProBold) format('svg');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family:ChaparralProRegular;src:url(../fonts/chaparral-pro/chaparralpro-regular.eot);src:url(../fonts/chaparral-pro/chaparralpro-regular.eot) format('embedded-opentype'),url(../fonts/chaparral-pro/chaparralpro-regular.woff) format('woff'),url(../fonts/chaparral-pro/chaparralpro-regular.ttf) format('truetype'),url(../fonts/chaparral-pro/chaparralpro-regular.svg#ChaparralProRegular) format('svg');font-weight:400;
+}
+
+@font-face {
+    font-family:ChaparralProBoldItalic;src:url(../fonts/chaparral-pro/chaparralpro-boldit.eot);src:url(../fonts/chaparral-pro/chaparralpro-boldit.eot) format('embedded-opentype'),url(../fonts/chaparral-pro/chaparralpro-boldit.woff) format('woff'),url(../fonts/chaparral-pro/chaparralpro-boldit.ttf) format('truetype'),url(../fonts/chaparral-pro/chaparralpro-boldit.svg#ChaparralProBoldItalic) format('svg');font-weight:700;
+}
+
+@font-face {
+    font-family:ChaparralProItalic;src:url(../fonts/chaparral-pro/chaparralpro-italic.eot);src:url(../fonts/chaparral-pro/chaparralpro-italic.eot) format('embedded-opentype'),url(../fonts/chaparral-pro/chaparralpro-italic.woff) format('woff'),url(../fonts/chaparral-pro/chaparralpro-italic.ttf) format('truetype'),url(../fonts/chaparral-pro/chaparralpro-italic.svg#ChaparralProItalic) format('svg');font-weight:400;
+}
+
+@font-face {
+    font-family:AvenirNextLTProBold;src:url(../fonts/avenir/avenirnextltpro-bold.eot);src:url(../fonts/avenir/avenirnextltpro-bold.eot) format('embedded-opentype'),url(../fonts/avenir/avenirnextltpro-bold.woff) format('woff'),url(../fonts/avenir/avenirnextltpro-bold.ttf) format('truetype'),url(../fonts/avenir/avenirnextltpro-bold.svg#AvenirNextLTProBold) format('svg');font-weight:700;
+}
+
+@font-face {
+    font-family:AvenirNextLTProMedium;src:url(../fonts/avenir/avenirnextltpro-medium.eot);src:url(../fonts/avenir/avenirnextltpro-medium.eot) format('embedded-opentype'),url(../fonts/avenir/avenirnextltpro-medium.woff) format('woff'),url(../fonts/avenir/avenirnextltpro-medium.ttf) format('truetype'),url(../fonts/avenir/avenirnextltpro-medium.svg#AvenirNextLTProMedium) format('svg');font-weight:600;
+}
+
+@font-face {
+    font-family:AvenirNextLTProRegular;src:url(../fonts/avenir/avenirnextltpro-regular.eot);src:url(../fonts/avenir/avenirnextltpro-regular.eot) format('embedded-opentype'),url(../fonts/avenir/avenirnextltpro-regular.woff) format('woff'),url(../fonts/avenir/avenirnextltpro-regular.ttf) format('truetype'),url(../fonts/avenir/avenirnextltpro-regular.svg#AvenirNextLTProRegular) format('svg');font-weight:400;
+}
+
+@font-face {
+    font-family:AvenirNextLTProUltraLight;src:url(../fonts/avenir/avenirnextltpro-ultlt.eot);src:url(../fonts/avenir/avenirnextltpro-ultlt.eot) format('embedded-opentype'),url(../fonts/avenir/avenirnextltpro-ultlt.woff) format('woff'),url(../fonts/avenir/avenirnextltpro-ultlt.ttf) format('truetype'),url(../fonts/avenir/avenirnextltpro-ultlt.svg#AvenirNextLTProUltraLight) format('svg');font-weight:300;
+}
+
+@font-face {
+    font-family: Pe-icon-7-stroke;
+    src: url(../fonts/pe-icon-7-stroke/Pe-icon-7-stroke.eot?-9uki6c);
+    src: url(../fonts/pe-icon-7-stroke/Pe-icon-7-stroke.eot?#iefix-9uki6c) format('embedded-opentype'),url(../fonts/pe-icon-7-stroke/Pe-icon-7-stroke.woff?-9uki6c) format('woff'),url(../fonts/pe-icon-7-stroke/Pe-icon-7-stroke.ttf?-9uki6c) format('truetype'),url(../fonts/pe-icon-7-stroke/Pe-icon-7-stroke.svg?-9uki6c#Pe-icon-7-stroke) format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
