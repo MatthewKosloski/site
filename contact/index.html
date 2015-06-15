@@ -5,42 +5,44 @@ title_icon: "pe-7s-mail"
 title_text: Do you want to work together on a project, or just say hello?
 ---
 
-<section class="main">
+<section class="cf main">
 
     <noscript>
-    	<p class="noscript">This page needs JavaScript enabled to work.</p> 
-    	<style>.noscript{text-align:center;}form{display:none;}</style>
-	</noscript>
+      <p class="noscript">This page needs JavaScript enabled to work.</p> 
+      <style>.noscript{text-align:center;}form{display:none;}</style>
+    </noscript>
 
-	<form class="cf" autocomplete="off" spellcheck="false" onsubmit="return formValidation(this);" action="javascript:void(0);" method="post" novalidate>
-		<div class="grid">
-			<input type="text" style="display:none;" value="" id="antibot">           
-    		<div class="form-module grid__col--1-of-2">
-      			<label>Full Name<span class="required">&#42;</a></label>
-      			<input type="text" name="name" id="name">
-    		</div>
-    		<div class="form-module grid__col--1-of-2">
-      			<label>Email<span class="required">&#42;</a></label>
-      			<input type="text" name="email" id="email">
-    		</div>
-    		<div class="form-module grid__col--2-of-2">
-      			<label>Subject<span class="required">&#42;</a></label>
-      			<input id="hidden-subject" name="subject" type="hidden" value="Work Inquiry">
-      			<span id="subject" class="subject" type="text" id="subject">Work Inquiry</span>
-      			<ul id="subjects" class="subjects">
-      				<li>Work Inquiry</li>
-      				<li>Front-end Development</li>
-      				<li>Web Design</li>
-      				<li>I'm just saying hello!</li>
-      				<li>I'm an extraterrestrial life form looking for a place to sleep</li>
-      			</ul>
-    		</div>
-    		<div class="form-module grid__col--2-of-2">
-      			<label>Message<span class="required">&#42;</a></label>
-      			<textarea name="message" id="message"></textarea>
-    		</div>
-		</div>
-		 <button type="submit" name="send" class="btn send">Send</button>
-	</form>	
+    <form id="js-validate" class="cf" action="send.php" method="get" autocomplete="off" spellcheck="false">
+          <div class="column large-12 medium-12 small-12" style="display:none;">
+            <input type="text" value="" id="bot"> 
+          </div>          
+          <div id="js-name-module" class="form-module column large-6 medium-6 small-12">
+              <label for="name">Full Name<span class="required">&#42;</span></label>
+              <input type="text" name="name" id="name">
+          </div>
+          <div id="js-email-module" class="form-module column large-6 medium-6 small-12">
+              <label for="email">Email<span class="required">&#42;</span></label>
+              <input type="email" name="email" id="email">
+          </div>
+          <div class="form-module column large-12 medium-12 small-12">
+              <label for="subject">Subject<span class="required">&#42;</span></label>
+              <input type="hidden" id="hidden-subject" name="subject" value="Work Inquiry">
+              <span type="text" name="subject" id="subject" class="subject">Work Inquiry</span>
+              <ul id="subjects" class="subjects">
+                <li>Work Inquiry</li>
+                <li>Front-end Development</li>
+                <li>Web Design</li>
+                <li>I'm just saying hello!</li>
+                <li>I'm an extraterrestrial life form looking for a place to sleep</li>
+              </ul>
+          </div>
+          <div id="js-message-module" class="form-module column large-12 medium-12 small-12">
+              <label for="message">Message<span class="required">&#42;</span></label>
+              <textarea name="message" id="message"></textarea>
+          </div>
+          <div class="column large-4 medium-4 small-4">
+            <button type="submit" name="send" class="btn float--right">Send</button>
+          </div>
+    </form> 
 
 </section>

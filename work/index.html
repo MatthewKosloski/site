@@ -5,34 +5,36 @@ title_icon: "pe-7s-portfolio"
 title_text: Here's a brief showcase of my work.
 ---
 
-<section class="main">
-  <div class="grid">
-    {% for weight in (1..9) %}
+<section class="cf main">
+  {% for weight in (1..9) %}
 
-   		{% for post in site.categories.project %}
-    		{% if post.weight == weight %}
-      		<div id="shot" class="shot grid__col--1-of-3">
-    				<a class="overlay-link" href="{{ post.url }}">
-    					<img src="{{ post.work_preview }}" alt="{{ post.title }}"/>
-    					<span class="overlay"><i class="view pe-7s-glasses"></i></span>
-    				</a>
-            <p>{{ post.title }}</p>
-  			  </div>
-    		{% endif %}
-    	{% endfor %}
-
-      {% for post in site.categories.link %}
-        {% if post.weight == weight %}
-          <div id="shot" class="shot grid__col--1-of-3">
-            <a class="overlay-link" href="{{ post.link }}">
-                <img src="{{ post.work_preview }}" alt="{{ post.title }}"/>
-                <span class="overlay"><i class="view pe-7s-glasses"></i></span>
+    {% for post in site.categories.project %}
+      {% if post.weight == weight %}
+        <div class="shot column large-4 medium-6 small-12">
+          <div class="shot__container">
+            <a href="{{ post.url }}">
+              <div class="overlay"><span class="pe-7s-glasses"></span></div>
+              <img src="{{ post.work_preview }}" alt="{{ post.title }}">
             </a>
             <p>{{ post.title }}</p>
           </div>
-        {% endif %}
-      {% endfor %}
-
+        </div>
+      {% endif %}
     {% endfor %}
-  </div>
+
+    {% for post in site.categories.link %}
+      {% if post.weight == weight %}
+        <div class="shot column large-4 medium-6 small-12">
+          <div class="shot__container">
+            <a href="{{ post.link }}">
+              <div class="overlay"><span class="pe-7s-glasses"></span></div>
+              <img src="{{ post.work_preview }}" alt="{{ post.title }}">
+            </a>
+            <p>{{ post.title }}</p>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+
+  {% endfor %}
 </section>
