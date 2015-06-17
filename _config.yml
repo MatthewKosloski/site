@@ -1,7 +1,8 @@
 # Site settings
 name: Matthew Kosloski
 email: hi@mtk.me
-url: http://localhost:4000
+# Don't include trailing slack '/' at end of URL
+url: http://matthewkosloski.me
 description: "My name is Matthew, and I'm a 17-year-old front-end web developer and designer from Chicago. I specialize in front-end development, responsive web design, and search engine optimization."
 timezone: America/Chicago
 include: ['.htaccess']
@@ -36,8 +37,8 @@ sitemap:
 assets:
   js_compressor:  uglifier
   css_compressor: sass
-  cache: true
+  cache: false
   sources:
     - _assets/js
     - _assets/scss
-  cachebust: hard
+  cachebust: none
