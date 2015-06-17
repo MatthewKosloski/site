@@ -1,21 +1,21 @@
        <div class="row">
             <footer class="cf">
                 <ul class="column large-5 medium-12 small-12">
-                    <h6>About</h6>
-                    <p class="footer-about">{{ site.description }}</p>
+                    <li>About</li>
+                    <li class="footer-about">{{ site.description }}</li>
                 </ul>
                 <ul class="column large-3 medium-4 small-12 hide-for-small-only">
-                    <h6>Electronic Mail</h6>
+                    <li>Electronic Mail</li>
                     <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
                 </ul>
                 <ul class="column large-2 medium-4 small-12">
-                    <h6>Elsewhere</h6>
+                    <li>Elsewhere</li>
                     <li><a href="http://www.dribbble.com/{{ site.dribbble }}">Dribbble</a></li>
                     <li><a href="http://www.instagram.com/{{ site.instagram }}">Instagram</a></li>
                     <li><a href="http://www.twitter.com/{{ site.twitter }}">Twitter</a></li>
                 </ul>
                 <ul class="column large-2 medium-4 small-12 hide-for-small-only">
-                    <h6>Recent work</h6>
+                    <li>Recent work</li>
                     {% for weight in (1..3) %}
 
                         {% for post in site.categories.project %}
@@ -38,27 +38,11 @@
 
                     {% endfor %}
                 </ul>
-                <p id="foot-note" class="foot-note"></p>
+                <div class="column large-12 medium-12 small-12">
+                    <p class="foot-note">Site content is licensed under the <a href="http://opensource.org/licenses/MIT">MIT</a> license.  View the <a href='https://github.com/MatthewKosloski/site'>source</a>.</p>
+                </div>
             </footer>
         </div>
-
     {{ 'app' | javascript }}
-    <script>
-        var GoSquared = {};
-        GoSquared.acct = "GSN-121401-L";
-        (function(w){
-        function gs(){
-        w._gstc_lt = +new Date;
-        var d = document, g = d.createElement("script");
-        g.type = "text/javascript";
-        g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
-        var s = d.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(g, s);
-        }
-        w.addEventListener ?
-        w.addEventListener("load", gs, false) :
-        w.attachEvent("onload", gs);
-        })(window);
-    </script>
     </body>
 </html>
