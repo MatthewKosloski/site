@@ -1,14 +1,17 @@
 {% include head.html %}
-<div class="article wrapper">
-	<section class="cf main">
-		<article>
-			<section class="article-title">
-				<h1>{{ page.title }}</h1>
-				{% if page.subtitle %}<h2>{{ page.subtitle }}</h2>{% endif %}
-			 	<hr class="article-sep">
+	{% include header.html %}
+	<div class="row">
+		<div class="article column large-12 medium-12 small-12">
+			<section class="cf main">
+				<article>
+					<section class="article-title">
+						<h1>{{ page.title }}</h1>
+						{% if page.subtitle %}<h2>{{ page.subtitle }}</h2>{% endif %}
+					 	<hr class="article-sep">
+					</section>
+					{{ content }}
+				</article>
 			</section>
-			{{ content }}
-		</article>
-	</section>
-</div>
-{% if page.hide-footer != true %}{% include footer.html %}{% endif %}
+		</div>
+	</div>
+	{% if page.hide-footer != true %}{% include footer.html %}{% endif %}

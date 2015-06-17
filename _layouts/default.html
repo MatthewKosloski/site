@@ -1,13 +1,14 @@
 {% include head.html %}
-<div class="row">
-	<section class="title column large-12 medium-12 small-12">
-	  <i class="{{page.title_icon}}"></i>
-	  <p>{{page.title_text}}</p>
-	  <hr>
-	</section>
-</div>
-<div class="row">
-	{{ content }}
-</div>
+	{% include header.html %}
+	<div class="row">
+		<section class="title column large-12 medium-12 small-12">
+		  <span class="{{page.title_icon}}"></span>
+		  <p>{{page.title_text}}</p>
+		  <hr>
+		</section>
+	</div>
+	<div class="row">
+		{{ content }}
+	</div>
 {% include footer.html %}
 
