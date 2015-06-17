@@ -12,33 +12,36 @@ title_text: Do you want to work together on a project, or just say hello?
       <style>.noscript{text-align:center;}form{display:none;}</style>
     </noscript>
 
-    <form id="js-validate" class="cf" action="send.php" method="get" autocomplete="off" spellcheck="false">
-          <div class="column large-12 medium-12 small-12" style="display:none;">
-            <input type="text" value="" id="bot"> 
-          </div>          
-          <div id="js-name-module" class="form-module column large-6 medium-6 small-12">
-              <label for="name">Full Name<span class="required">&#42;</span></label>
-              <input type="text" name="name" id="name">
+    <form id="js-validate" class="cf" action="send.php" method="post" autocomplete="off" spellcheck="false">
+          <div class="column large-12 medium-12 small-12 display--none">
+            <p id="js-success" class="notice notice--green"><span class="pe-7s-check"></span>Your email has been sent!</p>
           </div>
-          <div id="js-email-module" class="form-module column large-6 medium-6 small-12">
-              <label for="email">Email<span class="required">&#42;</span></label>
-              <input type="email" name="email" id="email">
+<!--           <div class="column large-12 medium-12 small-12" style="display:none;">
+            <input type="text" value="" id="bot"> 
+          </div>           -->
+          <div class="form-module column large-12 medium-12 small-12">
+            <label for="name">Full Name<span>&#42;</span></label>
+            <input type="text" name="name" id="name">
           </div>
           <div class="form-module column large-12 medium-12 small-12">
-              <label for="subject">Subject<span class="required">&#42;</span></label>
-              <input type="hidden" id="hidden-subject" name="subject" value="Work Inquiry">
-              <span type="text" name="subject" id="subject" class="subject">Work Inquiry</span>
-              <ul id="subjects" class="subjects">
-                <li>Work Inquiry</li>
-                <li>Front-end Development</li>
-                <li>Web Design</li>
-                <li>I'm just saying hello!</li>
-                <li>I'm an extraterrestrial life form looking for a place to sleep</li>
-              </ul>
+            <label for="email">Email<span>&#42;</span></label>
+            <input type="text" name="email" id="email">
           </div>
-          <div id="js-message-module" class="form-module column large-12 medium-12 small-12">
-              <label for="message">Message<span class="required">&#42;</span></label>
-              <textarea name="message" id="message"></textarea>
+          <div class="form-module column large-12 medium-12 small-12">
+            <label for="subject">Subject<span>&#42;</span></label>
+            <input type="hidden" id="hidden-subject" name="subject" value="Work Inquiry">
+            <span id="subject" class="subject">Work Inquiry</span>
+            <ul id="subjects" class="subjects">
+              <li>Work Inquiry</li>
+              <li>Front-end Development</li>
+              <li>Web Design</li>
+              <li>I'm just saying hello!</li>
+              <li>I'm an extraterrestrial life form looking for a place to sleep</li>
+            </ul>
+          </div>
+          <div class="form-module column large-12 medium-12 small-12">
+            <label for="message">Message<span>&#42;</span></label>
+            <textarea name="message" id="message"></textarea>
           </div>
           <div class="column large-4 medium-4 small-4">
             <button type="submit" name="send" class="btn float--right">Send</button>
