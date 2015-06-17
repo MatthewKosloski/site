@@ -6,6 +6,7 @@
 //= require dropdown
 //= require jquery.validate
 //= require contact
+//= require jquery.scrollTo.min
 //= require tweet
 //= require google-analytics
 //= require gosquared

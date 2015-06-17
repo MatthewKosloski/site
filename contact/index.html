@@ -8,13 +8,15 @@ title_text: Do you want to work together on a project, or just say hello?
 <section class="cf main">
 
     <noscript>
-      <p class="noscript">This page needs JavaScript enabled to work.</p> 
+      <div class="column large-12 medium-12 small-12">
+        <p class="notice notice--red"><span class="pe-7s-close-circle"></span>In order to send an email, JavaScript must be enabled. :(</p>
+      </div>
       <style>.noscript{text-align:center;}form{display:none;}</style>
     </noscript>
 
     <form id="js-validate" class="cf" action="send.php" method="post" autocomplete="off" spellcheck="false">
-          <div class="column large-12 medium-12 small-12 display--none">
-            <p id="js-success" class="notice notice--green"><span class="pe-7s-check"></span>Your email has been sent!</p>
+          <div id="js-success" class="column large-12 medium-12 small-12 display--none">
+            <p class="notice notice--green"><span class="pe-7s-check"></span>Your email has been sent!</p>
           </div>
 <!--           <div class="column large-12 medium-12 small-12" style="display:none;">
             <input type="text" value="" id="bot"> 
