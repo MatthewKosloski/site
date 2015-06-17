@@ -34,5 +34,5 @@ Make sure you have the following gems installed on your system:
 If you have any questions, comments, or concerns, you can contact me via email at [matthewkosloski@me.com](mailto:matthewkosloski@me.com) or tweet me [@_mkos](http://twitter.com/_mkos).
 
 ## License
-[MIT](http://opensource.org/licenses/MIT)
+Site content is licensed under the [MIT](http://opensource.org/licenses/MIT) license.
 
