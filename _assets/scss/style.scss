@@ -24,6 +24,7 @@ $darkRed: #d14141;
 $white: #fff;
 $bodyGray: #444;
 $selectionGray: #f3f3f3;
+$noticeGreen: #2ECC71;
 
 html,
 body {
@@ -38,6 +39,7 @@ body {
 }
 
 @include selection {background-color: $selectionGray;}
+
 
 /*******************************************************************************
  * AUTHOR'S STYLES
@@ -173,6 +175,9 @@ pre {
     a {
         color: #666;
         text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 
@@ -209,6 +214,11 @@ header {
             color: #888;
             text-decoration: none;
             @include transition(all 0.2s ease);
+            &:not(.logo):hover {
+                border-bottom: 1px solid $red;
+                color: $bodyGray;
+                @include transition(all 0.2s ease);
+            }
             &:not(:first-child) {
                 margin: 0 0 0 45px;
                 @include breakpoint(md) {
@@ -224,16 +234,6 @@ header {
     border-bottom: 1px solid $red;
     color: $bodyGray;
     @include transition(all 0.2s ease);
-}
-
-header {
-    a {
-        &:hover {
-            border-bottom: 1px solid $red;
-            color: $bodyGray;
-            @include transition(all 0.2s ease);
-        }
-    }
 }
 
 .title {
@@ -253,7 +253,7 @@ header {
 }
 
 i[class*="pe-7s-"],
-span[class*="icon-"] {
+span[class*="pe-7s-"] {
     display: block;
     margin: 0 auto;
     width: 50px;
@@ -316,6 +316,7 @@ footer {
     border-top: 1px solid $selectionGray;
     border-bottom: 1px solid $selectionGray;
     .footer-about {
+        @extend p;
         width: 85%;
     }
     .foot-note {
@@ -323,10 +324,16 @@ footer {
         width: 100%;
         position: absolute;
         left: 0;
-        bottom: 25px;
+        right: 0;
+        margin-top: 25px;
     }
     ul {
         list-style: none;
+        li {
+            &:first-child {
+                @extend h6;
+            }
+        }
     }
 
 }
@@ -429,6 +436,7 @@ footer {
             padding: 10px;
             width: 60px;
             height: 60px;
+            margin: 0;
             &:active {
                 background-color: $darkRed;
             }
@@ -445,6 +453,15 @@ footer {
     }
     100% {
         @include transform(translateX(-50%) translateY(-50%));
+    }
+}
+
+@include keyframes(fadeIn) {
+    from {
+        opacity: 0;
+    }
+    to {
+       opacity: 1;
     }
 }
 
@@ -500,10 +517,6 @@ footer {
         width: 33.333%;
         float: left;
     }
-}
-
-.article {
-    width: 700px;
 }
 
 .article-title {
@@ -605,11 +618,6 @@ textarea {
     max-width: 100%;
 }
 
-.required {
-    color: $red;
-    margin-left: 1px;
-}
-
 .subject {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -617,12 +625,16 @@ textarea {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    position: relative;
     cursor: pointer;
     &::after {
+        content: "\e688";
+        font-family: "pe-icon-7-stroke";
         font-size: rem(32);
         position: absolute;
         right: 15px;
-        top: 41px;
+        top: 50%;
+        transform: translateY(-50%);
         color: #d4d4d4;
         font-weight: 600;
         height: auto;
@@ -630,8 +642,17 @@ textarea {
     }
 }
 
+.drop-close::after{ 
+    font-family: "pe-icon-7-stroke";
+    content: "\e682";
+}
+
 .form-module {
     position: relative;
+    span:not(.subject) {
+        color: $red;
+        margin-left: 1px;
+    }
 }
 
 .subjects {
@@ -649,4 +670,61 @@ textarea {
         }
     }
     .subject {cursor: pointer;}
+}
+
+.notice {
+    @include border-radius(3px);    
+    margin: 0 0 15px 0;
+    color: $white;
+    height: 48px;
+    text-align: left;
+    line-height: 48px;
+    padding: 0 15px;
+    position: relative;
+    [class^="pe-"] {
+        font-size: em(25);
+        text-align: left;
+        display: inline-block;
+        color: #fff;
+        font-weight: 700;
+        vertical-align: middle;
+        margin: 0 10px 0 0;
+        width: 32px;
+        height: 32px;
+    }
+    a {
+        color: $white;
+        text-decoration: underline;
+        &:hover {text-decoration:none;}
+    }
+    .pe-7s-check,
+    .pe-7s-close-circle {
+        line-height: 48px;
+        vertical-align: middle;
+        width: auto;
+        height: 48px;
+        float: left;
+    }
+    .pe-7s-close {
+        opacity: 0.50;
+        vertical-align: middle;
+        line-height: 48px;
+        cursor: pointer;
+        float: right;
+        width: auto;
+        height: 48px;
+        margin-right: 0;
+        @include breakpoint(sm) {
+            display: none;
+        }
+    }
+}
+
+.notice--green {
+    background-color: $noticeGreen;
+}
+/* Differentiate between error class applied to labels and text areas */
+label.error {
+    @extend .notice;
+    background-color: $red;
 }
