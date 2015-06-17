@@ -11,6 +11,7 @@ port: 4000
 # Variables
 dribbble: matthewkosloski
 instagram: matthewkosloski
+unsplash: matthew
 twitter: _mkos
 color: df4747
 keywords: "web designer, web developer, matthew kosloski, front-end development, css3, html5, dribbble, twitter, instagram, javascript, search engine optimization, jquery, responsive web design"
