@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <meta name="author" content="{{ site.name }}">
-        <meta name="copyright" content="{{ site.name }}">
         <meta name="keywords" content="{{ site.keywords }}">
         <meta name="description" content="{{ site.description }}">
 
@@ -42,10 +41,8 @@
 
         <title>{{ site.name }} &mdash; {% if page.title %}{{ page.title }}{% endif %}</title>
 
-        <link rel="icon" type="image/png" href="{{ site.url }}/img/favicon.png">
+        <link rel="icon" type="image/png" href="{{ site.url }}/img/favicons/favicon.png">
 
         {{ 'style' | stylesheet }}
     </head>
     <body>
-
-    	{% include header.html %}
