@@ -7,6 +7,8 @@
 //= require jquery.validate
 //= require contact
 //= require jquery.scrollTo.min
+//= require jquery.lazyload.min
 //= require tweet
 //= require google-analytics
 //= require gosquared
+$("img.lazy").lazyload();
