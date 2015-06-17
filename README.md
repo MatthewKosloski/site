@@ -31,7 +31,7 @@ Make sure you have the following gems installed on your system:
 
 ## Support
 
-If you have any questions, comments, or concerns, you can contact me via email at [matthewkosloski@me.com](mailto:matthewkosloski@me.com) or tweeting me [@_mkos](http://twitter.com/_mkos).
+If you have any questions, comments, or concerns, you can contact me via email at [matthewkosloski@me.com](mailto:matthewkosloski@me.com) or tweet me [@_mkos](http://twitter.com/_mkos).
 
 ## License
 [MIT](http://opensource.org/licenses/MIT)
