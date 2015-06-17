@@ -500,6 +500,10 @@ footer {
     margin: 0 auto;
     max-width: 100%;
     width: 768px;
+    h1 {
+        color: $bodyGray;
+        @extend h2;
+    }
 }
 
 .posts-in-year {

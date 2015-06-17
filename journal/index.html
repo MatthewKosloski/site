@@ -11,7 +11,7 @@ title_text: I write about paramount things.
 
 		  {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
 		  {% if currentyear != year %}
-		    <h2>{{ currentyear }}</h2>
+		    <h1>{{ currentyear }}</h1>
 		    {% capture year %}{{currentyear}}{% endcapture %} 
 		  {% endif %}
 		  <ul class="posts-in-year">
