@@ -6,6 +6,10 @@ This website is built with [Jekyll](http://jekyllrb.com), a simple, blog-aware, 
 
 Have fun, and happy coding!
 
+## Usage
+
+You are free to use this code anywhere, and modify it however you'd like.  Just make sure to remove the analytics before deploying it on a remote server.  To do that, go to `_assets > js > app.js` and remove `//= require google-analytics` and `//= require gosquared`.  Then, delete the files within the `js` folder.
+
 ## License
 [MIT](http://opensource.org/licenses/MIT)
 
