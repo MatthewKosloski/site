@@ -1,0 +1,73 @@
+.shot {
+    &:last-child {
+        @include breakpoint(lg) {
+            display: none;
+        }
+        @include breakpoint(sm) {
+            display: block;
+        }
+    }
+}
+
+.shot__container {
+    position: relative;
+    margin-bottom: 60px;
+    a {
+        display: block;
+        &:hover {
+            .overlay {
+                opacity: 1;
+                @include transition(all 0.15s ease-in-out);
+                span {
+                    @include animation(dropIn 0.25s ease-in-out); 
+                }
+            }
+        }
+    }
+    img {
+        display: block;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        height: auto;
+        @include border-radius(3px);
+    }
+    p {
+        text-align: center;
+        position: absolute;
+        right: 0;
+        bottom: -60px;
+        left: 0;
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        overflow: hidden;
+        @include border-radius(3px);
+        background-color: rgba(223,71,71,0.7);
+        @include transition(all 0.15s ease-in-out);
+        span {
+            background-color: $red;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            bottom: 0;
+            left: 50%;
+            @include transform(translateX(-50%) translateY(-50%));
+            @include border-radius(100%);
+            font-size: 40px;
+            color: #fff;
+            padding: 10px;
+            width: 60px;
+            height: 60px;
+            margin: 0;
+            &:active {
+                background-color: $darkRed;
+            }
+        }
+    }
+}

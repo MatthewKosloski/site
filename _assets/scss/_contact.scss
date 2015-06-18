@@ -1,0 +1,163 @@
+/*******************************************************************************
+ * CONTACT
+ ******************************************************************************/
+
+form {
+    max-width: 768px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+input,
+textarea,
+.subject {
+    border: 2px solid $selectionGray;
+    font-size: rem(16);
+    line-height: 18px;
+    color: inherit;
+    padding: 10px 15px;
+    width: 100%;
+    -webkit-appearance: none;
+    @include border-radius(0px);
+}
+
+.subject {
+    padding: 13px 18px;
+    display: block;
+}
+
+label {
+    display: block;
+    padding: 0 0 5px 0;
+}
+
+input {
+    height: 48px;
+}
+
+input,
+textarea {
+    @include placeholder {
+        color: $bodyGray;
+    }
+    &:focus {
+        border: 2px solid #e5e5e5;
+    }
+}
+
+textarea {
+    height: 200px;
+    max-width: 100%;
+}
+
+.subject {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    cursor: pointer;
+    &::after {
+        content: "\e688";
+        font-family: "pe-icon-7-stroke";
+        font-size: rem(32);
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #d4d4d4;
+        font-weight: 600;
+        height: auto;
+        cursor: pointer;
+    }
+}
+
+.drop-close::after{ 
+    font-family: "pe-icon-7-stroke";
+    content: "\e682";
+}
+
+.form-module {
+    position: relative;
+    span:not(.subject) {
+        color: $red;
+        margin-left: 1px;
+    }
+}
+
+.subjects {
+    list-style: none;
+    font-size: rem(16);
+    line-height: 2;
+    padding: 10px 15px;
+    border: 2px solid $selectionGray;
+    margin-top: -2px;
+    display: none;
+    li {
+        cursor: pointer;
+        &:hover {
+            color: #000;
+        }
+    }
+    .subject {cursor: pointer;}
+}
+
+.notice {
+    @include border-radius(3px);    
+    margin: 0 0 15px 0;
+    color: $white;
+    height: 48px;
+    text-align: left;
+    line-height: 48px;
+    padding: 0 15px;
+    position: relative;
+    [class^="pe-"] {
+        font-size: em(25);
+        text-align: left;
+        display: inline-block;
+        color: #fff;
+        font-weight: 700;
+        vertical-align: middle;
+        margin: 0 10px 0 0;
+        width: 32px;
+        height: 32px;
+    }
+    a {
+        color: $white;
+        text-decoration: underline;
+        &:hover {text-decoration:none;}
+    }
+    .pe-7s-check,
+    .pe-7s-close-circle {
+        line-height: 48px;
+        vertical-align: middle;
+        width: auto;
+        height: 48px;
+        float: left;
+    }
+    .pe-7s-close {
+        opacity: 0.50;
+        vertical-align: middle;
+        line-height: 48px;
+        cursor: pointer;
+        float: right;
+        width: auto;
+        height: 48px;
+        margin-right: 0;
+        @include breakpoint(sm) {
+            display: none;
+        }
+    }
+}
+
+.notice--green {
+    background-color: $noticeGreen;
+}
+/* Differentiate between error class applied to labels and text areas */
+label.error {
+    @extend .notice;
+    background-color: $red;
+}

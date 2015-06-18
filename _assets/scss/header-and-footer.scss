@@ -1,0 +1,103 @@
+.logo {
+    margin: 1px 0 0 0;
+    text-align: left;
+    font-size: rem(22); 
+    font-family: "AvenirNextLTProRegular", "Lucida Grande", Arial, sans-serif;
+    a {
+        color: #666;
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+header,
+footer {
+    @include breakpoint(lg) {
+        max-width: calc(100% - 30px);
+        margin: 0 auto;
+    }
+    .column,
+    .columns {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+header {
+    padding: 90px 0 0 0;
+    border-bottom: 1px solid $selectionGray;
+    nav {
+        margin: 5px 0 0 0;
+        height: 59px;
+        text-align: right;
+        font-size: rem(18);
+        padding: 0;
+        @include breakpoint(sm) {
+            text-align: left;
+        }
+        a {
+            display: inline-block;
+            height: 60px;
+            border-bottom: 1px solid transparent;
+            color: #888;
+            text-decoration: none;
+            @include transition(all 0.2s ease);
+            &:not(.logo):hover {
+                border-bottom: 1px solid $red;
+                color: $bodyGray;
+                @include transition(all 0.2s ease);
+            }
+            &:not(:first-child) {
+                margin: 0 0 0 45px;
+                @include breakpoint(md) {
+                    margin: 0 0 0 20px;
+                }
+            }
+        }
+    }
+
+}
+
+footer {
+    font-size: 80%;
+    @include breakpoint(md) {
+        font-size: 100%;
+    }
+    @include breakpoint(sm) {
+        font-size: 100%;
+    }
+    margin-bottom: 100px;
+    padding: 45px 0 0 0;
+    border-top: 1px solid $selectionGray;
+    border-bottom: 1px solid $selectionGray;
+    .footer-about {
+        @extend p;
+        width: 85%;
+    }
+    .foot-note {
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-top: 25px;
+    }
+    ul {
+        list-style: none;
+        li {
+            &:first-child {
+                @extend h6;
+            }
+        }
+    }
+
+}
+
+.active {
+    border-bottom: 1px solid $red;
+    color: $bodyGray;
+    @include transition(all 0.2s ease);
+}

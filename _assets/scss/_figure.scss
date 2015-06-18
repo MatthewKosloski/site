@@ -1,0 +1,33 @@
+figure {
+    img {
+        margin: 0 0 8px 0;
+    }
+}
+
+figcaption {
+    position: relative;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    line-height: 28px;
+    font-size: rem(15);
+    font-family: "AvenirNextLTProRegular", "Lucida Grande", Arial, sans-serif;
+}
+
+.me {
+    img {
+        @include breakpoint(md) {
+            margin: 0 0 25px 0;
+        }
+    }
+    figcaption {
+        @include breakpoint(md) {
+            position: relative;
+            padding: 0;
+            background: transparent;
+            color: inherit;
+            font-size: rem(15);
+            line-height: 1.4;
+        }
+    }
+}

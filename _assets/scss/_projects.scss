@@ -1,0 +1,28 @@
+/*******************************************************************************
+ * PROJECTS
+ ******************************************************************************/
+
+.project-attributes {
+    font-size: 85%;
+    float: right;
+    margin: 5px 0 0 0;
+    list-style: none;
+    h2 {
+        @extend h6;
+    }
+}
+
+.post-attributes {
+    margin: 15px 0 0 0;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+}
+
+.project-description {
+    img {
+        @include border-radius(3px);
+        padding: 1px;
+        background-color: #f0f0f0;
+    }
+}

@@ -1,0 +1,79 @@
+/*******************************************************************************
+ * TYPOGRAPHY
+ ******************************************************************************/
+
+h1, 
+h2 {
+    margin: 0 0 15px 0;
+}
+
+b,
+strong {
+    font-family: "ChaparralProBold", Georgia, serif;
+    font-weight: 700;  
+}
+
+em {
+    font-family: "ChaparralProItalic", Georgia, serif;
+    font-weight: 400;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 10px 0;
+}
+
+
+h1 {
+    color: $red;
+    font-size: rem(40);
+}
+
+h2 {
+    font-family: "AvenirNextLTProMedium", "Lucida Grande", Arial, sans-serif;
+    font-weight: 400;
+    font-size: rem(24);
+}
+
+h3 {
+    font-size: rem(20);
+    text-transform: uppercase;
+    font-family: "ChaparralProBold", Georgia, serif;
+}
+
+h4 {
+    font-size: rem(13);
+}
+
+h6 {
+    color: #666;
+    font-size: rem(13);
+    text-transform: uppercase;
+    font-family: "AvenirNextLTProBold", "Lucida Grande", Arial, sans-serif;
+    letter-spacing: 0.755px;
+}
+
+h4,
+h5 {
+    font-family: "AvenirNextLTProRegular", "Lucida Grande", Arial, sans-serif;
+    letter-spacing: 0.755px;
+    color: inherit;
+}
+
+code, 
+pre {
+    font-family: Menlo, Monaco, "Courier New", monospace;
+    font-size: 75%;
+}
+
+code {
+    color: $red;
+}
+
+pre {
+    background-color: $selectionGray;
+    word-wrap: break-word;
+    padding: 10px;
+}
