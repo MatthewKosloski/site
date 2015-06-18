@@ -9,55 +9,44 @@
 
 		<div class="row">
 			<section class="cf main">
+				<ul class="cf project-attributes large-3 medium-12 small-12">
+					<li class="column large-12 medium-6 small-12">
+						{% if page.client %}
+						<h2>Client</h2>
+						<p>{{ page.client }}</p>
+						{% endif %}
+					</li>
+					<li class="column large-12 medium-6 small-12 hide-for-small-only">
+						{% if page.role %}
+						<h2>Role</h2>
+						<p>{{ page.role }}</p>
+						{% endif %}
+					</li>
+					<li class="column large-12 medium-6 small-12">
+						{% if page.tasks %}
+						<h2>Tasks</h2>
+						<p>{{ page.tasks }}</p>
+						{% endif %}
+					</li>
+					<li class="column large-12 medium-6 small-12">
+						{% if page.technologies %}
+						<h2>Technologies</h2>
+						<p>{{ page.technologies }}</p>
+						{% endif %}
+					</li>
+					<li class="column large-12 medium-6 small-12 hide-for-small-only">
+						{% if page.website_url %}
+						<h2>Website</h2>
+						<p><a href="{{ page.website_url }}">{{ page.website_name }}</a></p>
+						{% endif %}
+					</li>
+				</ul>
 
-					<ul class="cf project-attributes large-3 medium-12 small-12">
-						<li class="column large-12 medium-6 small-12">
-							{% if page.client %}
-							<h6>Client</h6>
-							<p>{{ page.client }}</p>
-							{% endif %}
-						</li>
-						<li class="column large-12 medium-6 small-12 hide-for-small-only">
-							{% if page.role %}
-							<h6>Role</h6>
-							<p>{{ page.role }}</p>
-							{% endif %}
-						</li>
-						<li class="column large-12 medium-6 small-12">
-							{% if page.tasks %}
-							<h6>Tasks</h6>
-							<p>{{ page.tasks }}</p>
-							{% endif %}
-						</li>
-						<li class="column large-12 medium-6 small-12">
-							{% if page.technologies %}
-							<h6>Technologies</h6>
-							<p>{{ page.technologies }}</p>
-							{% endif %}
-						</li>
-						<li class="column large-12 medium-6 small-12 hide-for-small-only">
-							{% if page.website_url %}
-							<h6>Website</h6>
-							<p><a href="{{ page.website_url }}">{{ page.website_name }}</a></p>
-							{% endif %}
-						</li>
-					</ul>
-
-					<div class="project-description large-8 medium-12 small-12">
-						
-						<div class="column large-12 medium-12 small-12">
-							{{ content }}
-						</div>
-
-						{% if page.fancybox %}
-							<div class="column large-12 medium-12 small-12">
-								<a class="fancybox" href="{{ page.fancybox }}" data-fancybox-group="gallery">
-									<img src="{{ page.fancybox }}" alt="">
-								</a>
-							</div>
-						{% endif %}				
-					</div>
-
+				<div class="project-description large-8 medium-12 small-12">
+					<div class="column large-12 medium-12 small-12">
+						{{ content }}
+					</div>			
+				</div>
 			</section>
 		</div>
 {% include footer.html %}
