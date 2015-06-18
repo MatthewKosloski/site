@@ -1,6 +1,5 @@
 //= require jquery-1.11.3.min
-//= require jquery.colorbox
-//= require box
+//= require jquery.colorbox-min
 //= require jquery.photoset-grid.min
 //= require photoset-grid-config
 //= require dropdown
