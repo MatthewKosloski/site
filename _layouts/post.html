@@ -16,16 +16,16 @@
 
 					<ul class="cf post-attributes">
 						<li>
-							<h6>Published on</h6>
+							<h3>Published on</h3>
 							<p>{{ page.date | date: "%B %d, %Y" }}</p>
 						</li>
 						<li>
-							<h6>Word Count</h6>
+							<h3>Word Count</h3>
 							{% capture time %}{{ content | count_words }}{% endcapture %}
 							<p>{{ time }}</p>
 						</li>
 						<li>
-							<h6>Reading time</h6>
+							<h3>Reading time</h3>
 							{% capture time %}{{ content | reading_time }}{% endcapture %}
 							<p>{{ time }} {% if time == '1' %}minute{% else %}minutes{% endif %}</p>
 						</li>
