@@ -29,6 +29,8 @@ Make sure you have the following gems installed on your system:
 - sass `gem install sass`
 - octopress-minify-html `gem install octopress-minify-html`
 
+After you have all the requisites installed, you may now open the directory via Terminal and run it locally with `jekyll serve`
+
 ## Support
 
 If you have any questions, comments, or concerns, you can contact me via email at [matthewkosloski@me.com](mailto:matthewkosloski@me.com) or tweet me [@_mkos](http://twitter.com/_mkos).
