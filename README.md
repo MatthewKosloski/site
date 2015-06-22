@@ -15,10 +15,10 @@ You are free to use this code anywhere in any way, and modify it however you'd l
 ### Running it locally
 
 If you wish to run this Jekyll site locally, you must have Jekyll installed on your computer.  
-To install Jekyll, run `gem install jekyll`
+To install Jekyll, run `gem install jekyll`.
 
 Then you must install [bundler](http://bundler.io/).
-To do that, run `gem install bundler`
+To do that, run `gem install bundler`.
 
 Make sure you have the following gems installed on your system:
 
@@ -29,7 +29,7 @@ Make sure you have the following gems installed on your system:
 - sass `gem install sass`
 - octopress-minify-html `gem install octopress-minify-html`
 
-After you have all the requisites installed, you may now open the directory via Terminal and run it locally with `jekyll serve`
+After you have all the requisites installed, you may now open the directory via Terminal and run it locally with `jekyll serve`.
 
 ## Support
 
