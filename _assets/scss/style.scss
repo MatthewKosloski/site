@@ -12,7 +12,7 @@ $noticeGreen: #2ECC71;
 /*******************************************************************************
  * CUSTOM RESETS && IMPORTS
  ******************************************************************************/
-
+@import "bourbon/bourbon";
 @import "normalize";
 @import "reset";
 @import "foundation-visibility";
@@ -23,7 +23,6 @@ $noticeGreen: #2ECC71;
 @import "breakpoints";
 @import "pe-icon-7-stroke";
 @import "colorbox";
-@import "bourbon/bourbon";
 
 /*******************************************************************************
  * AUTHOR'S BASE
