@@ -1,7 +1,7 @@
 # Site settings
 name: Matthew Kosloski
 email: hi@mtk.me
-# Don't include trailing slack '/' at end of URL
+# Don't include trailing slash '/' at end of URL
 url: http://matthewkosloski.me
 description: "My name is Matthew, and I'm a 17-year-old front-end web developer and designer from Chicago. I specialize in front-end development, responsive web design, and search engine optimization."
 timezone: America/Chicago
